@@ -515,6 +515,13 @@ h1, h2 {
   padding: 40px;
 }
 
+.review__avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .review_content {
   color: #999999;
   font-size: 20px;
@@ -522,12 +529,21 @@ h1, h2 {
   font-style: italic;
   line-height: 1.7;
 
+
   margin-bottom: 15px;
+}
+
+.review_content--avatar {
+  padding-left: 35px;
 }
 
 .review_author {
   font-family: 'Kaushan Script', cursive;
   font-size: 24px;
+}
+
+.review_author--avatar {
+  padding-left: 35px;
 }
 
 .review_author:before {
@@ -627,6 +643,69 @@ h1, h2 {
 .logo__image {
   transform: scale(0.95);
 }
+
+
+/*            WORKS            */
+.works {
+  display: flex;
+}
+
+.works__col {
+  flex: 1 1 0;
+}
+
+.works__item {
+  position: relative;
+
+  background: linear-gradient(to bottom, #f38181, #fce38a);
+}
+
+.works__item:hover .works__image {
+  opacity: .1;
+}
+
+.works__item:hover .works__info {
+  opacity: 1;
+  transition: opacity .2s linear;
+}
+
+.works__image {
+  display: block;
+  transition: opacity .2s linear;
+
+  /* для адаптивности картинок */
+  max-width: 100%;
+  height: auto;
+}
+
+.works__info {
+  opacity: 0;
+  width: 100%;
+  padding: 0 15px;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+
+  transform: translate3d(0, -50%, 0);
+
+  text-align: center;
+  color: #fff;
+}
+
+.works__title {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.works__text {
+  font-style: italic;
+  font-size: 15px;  
+}
+
+
 
 
 
